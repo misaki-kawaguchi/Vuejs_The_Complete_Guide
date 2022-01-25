@@ -22,7 +22,7 @@
       <button @click="reduce(5)">Reduce</button>
       <p>Result: {{ counter }}</p>
 
-      <input type="text" @input="setName($event, 'sample')" @keyup="confirmedInput">
+      <input type="text" @input="setName($event, 'sample')" @keyup.enter="confirmedInput">
       <p>Your Name: {{ confirmedName }}</p>
       <form @submit.prevent="submitForm">
         <input type="text">
