@@ -6,6 +6,14 @@ const app = Vue.createApp({
     };
   },
   methods: {
+    outputFullname() {
+      console.log('Runnning again...');
+      if (this.name == '') {
+        return '';
+      } else {
+        return this.name + ' ' + 'dummy';
+      }
+    },
     setName(event) {
       this.name = event.target.value;
     },
