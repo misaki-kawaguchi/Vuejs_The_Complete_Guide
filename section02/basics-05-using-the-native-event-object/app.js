@@ -9,6 +9,14 @@ const app = Vue.createApp({
   },
   // 特定のdata(データ)やcomputed(算出プロパティ)の状態を監視して、何か変化があった時に予め登録しておいた処理を自動的に実行してくれる仕組み
   watch: {
+    counter(value) {
+      if (value > 50) {
+        const that = this;
+        setTimeout(function () {
+          that.counter = 0;
+        }, 2000);
+      }
+    },
     // name(newValue, oldValue)
     // name(value) {
     //   if (value === '') {
